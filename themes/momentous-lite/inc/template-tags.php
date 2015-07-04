@@ -59,8 +59,7 @@ if ( ! function_exists( 'momentous_display_postmeta' ) ) :
 		if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
 		
 			<span class="meta-date">
-			<?php printf(__('Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 'momentous-lite'), 
-					esc_url( get_permalink() ),
+			<?php printf('<time class="entry-date published updated" title="%1$s" datetime="%2$s">%3$s</time>', 
 					esc_attr( get_the_time() ),
 					esc_attr( get_the_date( 'c' ) ),
 					esc_html( get_the_date() )
@@ -255,10 +254,7 @@ add_action( 'momentous_credit_link', 'momentous_display_credit_link' );
 
 function momentous_display_credit_link() { 
 		
-	printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
-		sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
-		sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
-	); 
+	printf('Сделано с любовью<a href="http://stefantsov.com">.</a>');
 }
 
 
