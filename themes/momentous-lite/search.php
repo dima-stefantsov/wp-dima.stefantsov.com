@@ -10,7 +10,7 @@
 		
 		<?php if (have_posts()) : ?>
 			<h2 id="search-title" class="archive-title">
-				<?php printf( 'Найдено по запросу %s', '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( 'Найдено по запросу: %s', '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 		
 			<div id="post-wrapper" class="clearfix">
@@ -29,7 +29,7 @@
 		else : ?>
 
 			<h2 id="search-title" class="archive-title">
-				<?php printf( 'Искали по запросу %s', '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( 'Искали по запросу: %s', '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 			
 			<div class="post type-page">
