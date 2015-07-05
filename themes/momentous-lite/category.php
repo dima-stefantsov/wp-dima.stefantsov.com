@@ -9,7 +9,7 @@
 		<section id="content" class="primary" role="main">
 
 			<h2 id="category-title" class="archive-title">
-				<?php printf(__('Category Archives: %s', 'momentous-lite'), '<span>' . single_cat_title( '', false ) . '</span>'); ?>
+				<?php printf('Тема: %s', '<span>' . single_cat_title( '', false ) . '</span>'); ?>
 			</h2>
 
 			<div id="post-wrapper" class="clearfix">

@@ -10,7 +10,7 @@
 		
 		<?php if (have_posts()) : ?>
 			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'momentous-lite'), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( 'Найдено по запросу %s', '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 		
 			<div id="post-wrapper" class="clearfix">
@@ -29,15 +29,17 @@
 		else : ?>
 
 			<h2 id="search-title" class="archive-title">
-				<?php printf( __( 'Search Results for: %s', 'momentous-lite'), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( 'Искали по запросу %s', '<span>' . get_search_query() . '</span>' ); ?>
 			</h2>
 			
-			<div class="post">
-				
+			<div class="post type-page">
 				<div class="entry">
-					<p><?php _e('No matches. Please try again, or use the navigation menus to find what you search for.', 'momentous-lite'); ?></p>
+	  				<p>И ничего не смогли найти =(</p>
+					<p>
+						Попробуйте ввести другой запрос или перейти на <a href="/">главную страницу</a>.
+						Ещё ссылки в меню справа → очень хорошо помогают.
+					</p>
 				</div>
-				
 			</div>
 
 			<?php endif; ?>
