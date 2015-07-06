@@ -56,7 +56,7 @@ html {
 	font-size: 100.01%;
 }
 body {
-	font-family: 'Average Sans', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 	font-size: 1.0em;
 	border: 0;
 	color: #111;
@@ -79,7 +79,7 @@ input, textarea {
 	border: 1px solid #ddd;
 	font-size: 1.0em;
 	color: #333;
-	font-family: 'Average Sans', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 }
 input[type="submit"] {
 	border: none;
@@ -160,7 +160,7 @@ input, textarea, select {
 #logo .site-title {
 	font-size: 2.5em;
 	color: #fff;
-	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 }
 #logo a, #logo a:hover {
 	text-decoration: none;
@@ -283,7 +283,7 @@ input, textarea, select {
 	text-decoration: none;
 	font-size: 0.9em;
 	font-weight: bold;
-	font-family: 'Average Sans', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 	text-transform: uppercase;
 }
 #mainnav-menu a:link, #mainnav-menu a:visited {
@@ -368,7 +368,7 @@ input, textarea, select {
 .widgettitle span {
 	font-size: 0.9em;
 	font-weight: bold;
-	font-family: 'Average Sans', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 	text-transform: uppercase;
 }
 .widget .textwidget {
@@ -457,7 +457,7 @@ input, textarea, select {
 	margin-right: 1.5em;
 }
 .page-title, .post-title {
-	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
+	font-family: Tahoma, Arial, sans-serif;
 	color: #282828;
 	line-height: 1.4em;
 	-ms-word-wrap: break-word;
