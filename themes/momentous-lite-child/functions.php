@@ -1,19 +1,21 @@
 <?php
 
+// ========================
 // http://wordpress.stackexchange.com/a/182023/76002
 // Add all required styles of parent before child.
 //
 // The idea is to simply filter the call to get_stylesheet_uri() in the parent
 // theme to return it's own stylesheet instead of the child theme's.
 // The child theme's stylesheet is then enqueued later in the action hook my_theme_styles.
-//
+// ========================
+
 function use_parent_theme_stylesheet() {
     // Use the parent theme's stylesheet
     return get_template_directory_uri() . '/style.css';
 }
 // Filter get_stylesheet_uri() to return the parent theme's stylesheet 
 add_filter('stylesheet_uri', 'use_parent_theme_stylesheet');
-//
+
 function my_theme_styles() {
     $themeVersion = wp_get_theme()->get('Version');
 
@@ -26,8 +28,71 @@ add_action('wp_enqueue_scripts', 'my_theme_styles', 20);
 
 
 
-// Translations and tweaks.
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =========================
+// Replace parent functions.
+// =========================
+
+function child_momentous_display_credit_link() { 
+		
+	printf('Сделано с любовью<a href="http://stefantsov.com">.</a>');
+}
+
+function child_momentous_display_site_title() { ?>
+	<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+<?php
+}
+
+function remove_parent_theme_features() {
+	remove_action( 'momentous_credit_link', 'momentous_display_credit_link' );
+    add_action( 'momentous_credit_link', 'child_momentous_display_credit_link' );
+    
+    remove_action( 'momentous_site_title', 'momentous_display_site_title' );
+    add_action( 'momentous_site_title', 'child_momentous_display_site_title' );
+}
+add_action( 'after_setup_theme', 'remove_parent_theme_features');	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ==========================
+// Override parent functions.
+// ==========================
+
 // Display Postmeta Data
 function momentous_display_postmeta() {
 	
@@ -62,28 +127,57 @@ function momentous_display_postmeta() {
 
 	<?php endif;
 }
-//
-function child_momentous_display_credit_link() { 
-		
-	printf('Сделано с любовью<a href="http://stefantsov.com">.</a>');
+
+function momentous_display_postinfo_index() {
+	if ( comments_open() ) : ?>
+		<div class="meta-comments">
+			<?php comments_popup_link( '0', '1', '%' ); ?>
+		</div>
+	<?php endif;
+
+	// Get Theme Options from Database
+	$theme_options = momentous_theme_options();
+
+	// Display Date unless user has deactivated it via settings
+	if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>
+		<span class="meta-category">
+			<?php printf('%1$s', get_the_category_list(', '));
+			
+			// Display Date unless user has deactivated it via settings
+			if ( isset($theme_options['meta_tags']) and $theme_options['meta_tags'] == true ) {
+				$tag_list = get_the_tag_list(', ', ', ');
+				if ( $tag_list ) {
+					printf('%1$s', $tag_list);
+				}
+			} ?>
+		</span>
+	<?php endif;
 }
-//
-function child_momentous_display_site_title() { ?>
-	<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
-	</a>
-<?php
-}
-//
-function remove_parent_theme_features() {
-	remove_action( 'momentous_credit_link', 'momentous_display_credit_link' );
-    add_action( 'momentous_credit_link', 'child_momentous_display_credit_link' );
-    
-    remove_action( 'momentous_site_title', 'momentous_display_site_title' );
-    add_action( 'momentous_site_title', 'child_momentous_display_site_title' );
-}
-add_action( 'after_setup_theme', 'remove_parent_theme_features');	
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ========
+// Filters.
+// ========
+
+// Localization.
 add_filter( 'get_the_archive_title', function ($title) {
     if ( is_category() ) {
 		$title = sprintf("Тема: <span>%s</span>", single_cat_title('', false));
@@ -96,6 +190,24 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ========================
+// Augmenting parent theme.
+// ========================
 
 // Display favicon.
 function favicon_link() {
