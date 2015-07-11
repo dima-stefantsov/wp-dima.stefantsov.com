@@ -2,7 +2,7 @@
 Theme Name: Momentous Lite
 Theme URI: http://themezee.com/themes/momentous/
 Description: Momentous is a modern Magazine theme featuring large post thumbnails, a clean typography and two column post layout. You can highlight your posts in the Featured Content area and display your social icons and search field in the header area with a few clicks. It goes without saying that Momentous is fully responsive and looks good on every device.
-Version: 1.0.9
+Version: 1.1
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: three-columns, light, blue, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, two-columns, black, silver, red, white, orange, green, purple, gray
@@ -56,7 +56,7 @@ html {
 	font-size: 100.01%;
 }
 body {
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Average Sans', Tahoma, Verdana, Arial;
 	font-size: 1.0em;
 	border: 0;
 	color: #111;
@@ -79,7 +79,7 @@ input, textarea {
 	border: 1px solid #ddd;
 	font-size: 1.0em;
 	color: #333;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Average Sans', Tahoma, Verdana, Arial;
 }
 input[type="submit"] {
 	border: none;
@@ -160,7 +160,7 @@ input, textarea, select {
 #logo .site-title {
 	font-size: 2.5em;
 	color: #fff;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
 }
 #logo a, #logo a:hover {
 	text-decoration: none;
@@ -283,7 +283,7 @@ input, textarea, select {
 	text-decoration: none;
 	font-size: 0.9em;
 	font-weight: bold;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Average Sans', Tahoma, Verdana, Arial;
 	text-transform: uppercase;
 }
 #mainnav-menu a:link, #mainnav-menu a:visited {
@@ -334,8 +334,8 @@ input, textarea, select {
 	display:block;
 }
 #mainnav-menu li.current_page_item a, #mainnav-menu li.current-menu-item a {
-  background-color: #ddd;
-//color: #22a8d8;
+	color: #22a8d8;
+	text-decoration: underline;
 }
 #mainnav-menu li.current_page_item ul li a, #mainnav-menu li.current-menu-item ul li a{
 	color: #fff;
@@ -368,7 +368,7 @@ input, textarea, select {
 .widgettitle span {
 	font-size: 0.9em;
 	font-weight: bold;
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Average Sans', Tahoma, Verdana, Arial;
 	text-transform: uppercase;
 }
 .widget .textwidget {
@@ -457,7 +457,7 @@ input, textarea, select {
 	margin-right: 1.5em;
 }
 .page-title, .post-title {
-	font-family: Tahoma, Arial, sans-serif;
+	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
 	color: #282828;
 	line-height: 1.4em;
 	-ms-word-wrap: break-word;
@@ -575,9 +575,6 @@ input, textarea, select {
 	padding: 1.3em 1em;
 	background: #fff;
 	margin-bottom: 1em;
-}
-.archive-title span {
-	color: #22a8d8;
 }
 
 /* Content Pagination */
