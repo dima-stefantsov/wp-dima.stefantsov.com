@@ -1,0 +1,60 @@
+/*
+ Theme Name:   Momentous Lite Child
+ Theme URI:    http://dima.stefantsov.com
+ Description:  Personal blog dima.stefantsov.com
+ Author:       Dima Stefantsov
+ Author URI:   http://dima.stefantsov.com
+ Template:     momentous-lite
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         russian, dimps, stefantsov
+ Text Domain:  momentous-lite-child
+*/
+
+body {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+input, textarea {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+#logo .site-title {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+#mainnav-menu a {
+	font-family: Tahoma, Arial, sans-serif;
+}
+#mainnav-menu a:hover {
+	color: #22a8d8;
+}
+
+#mainnav-menu li.current_page_item a,
+#mainnav-menu li.current-menu-item a {
+  background-color: #ddd;
+  color: inherit;
+  text-decoration: inherit;
+}
+#mainnav-menu li.current_page_item a:hover,
+#mainnav-menu li.current-menu-item a:hover {
+	color: #22a8d8;
+}
+
+.widgettitle span {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.page-title, .post-title {
+	font-family: Tahoma, Arial, sans-serif;
+}
+
+.archive-title span {
+	color: #22a8d8;
+}
+
+#logo a .site-title:hover {
+	color: #22a8d8;
+	text-decoration: inherit;
+}
