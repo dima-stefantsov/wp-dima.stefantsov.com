@@ -101,7 +101,6 @@ function momentous_display_postmeta() {
 
 	// Display Date unless user has deactivated it via settings
 	if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
-	
 		<span class="meta-date">
 		<?php printf('<time class="entry-date published updated" title="%1$s" datetime="%2$s">%3$s</time>', 
 				esc_attr( get_the_time() ),
@@ -110,12 +109,10 @@ function momentous_display_postmeta() {
 			);
 		?>
 		</span>
-	
 	<?php endif; 
 	
 	// Display Author unless user has deactivated it via settings
 	if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
-	
 		<span class="meta-author">
 		<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'momentous-lite'), 
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
@@ -124,10 +121,10 @@ function momentous_display_postmeta() {
 			);
 		?>
 		</span>
-
 	<?php endif;
 }
 
+// Display Postinfo Data on Archive Pages
 function momentous_display_postinfo_index() {
 	if ( comments_open() ) : ?>
 		<div class="meta-comments">
@@ -154,6 +151,28 @@ function momentous_display_postinfo_index() {
 	<?php endif;
 }
 
+// Display Content Pagination
+function momentous_display_pagination() { 
+	global $wp_query;
+	$big = 999999999; // need an unlikely integer
+	$paginate_links = paginate_links( array(
+			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+			'format' => '?paged=%#%',				
+			'current' => max( 1, get_query_var( 'paged' ) ),
+			'total' => $wp_query->max_num_pages,
+			'next_text' => '<span class="goto-older-posts">Следующая →</span>',
+			'prev_text' => '<span class="goto-newer-posts">← Предыдущая</span>',
+			'add_args' => false
+		) );
+
+	// Display the pagination if more than one page is found
+	if ( $paginate_links ) : ?>
+		<div class="post-pagination clearfix">
+			<?php echo $paginate_links; ?>
+		</div>
+	<?php
+	endif;
+}
 
 
 
