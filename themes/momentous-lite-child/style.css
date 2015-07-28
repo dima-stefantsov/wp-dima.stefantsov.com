@@ -58,3 +58,18 @@ input, textarea {
 	color: #22a8d8;
 	text-decoration: inherit;
 }
+
+#form-wysija-2,
+#form-wysija-3 {
+	overflow: hidden;
+}
+#form-wysija-2 .wysija-input {
+	min-width:350px;
+}
+#form-wysija-3 .wysija-input {
+	
+}
+#wysija-2 .widgettitle,
+#wysija-3 .widgettitle {
+	background-color:pink;
+}
