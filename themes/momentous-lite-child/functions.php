@@ -248,7 +248,7 @@ function child_momentous_register_sidebars() {
 }
 add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
-
+wp_enqueue_script('child-momentous-lite-dindex-js', get_stylesheet_directory_uri() .'/js/index.js', array('jquery'));
 
 
 

@@ -73,3 +73,102 @@ input, textarea {
 #wysija-3 .widgettitle {
 	background-color:pink;
 }
+
+/* Text Elements
+-------------------------------------------------------------- */
+.bluet_text_content {
+	line-height: 1.6em;
+	margin: 0.2em 0 0;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+.bluet_text_content p {
+	margin: 0.75em 0;
+}
+.bluet_text_content h1,
+.bluet_text_content h2,
+.bluet_text_content h3,
+.bluet_text_content h4,
+.bluet_text_content h5,
+.bluet_text_content h6 {
+	color: #222;
+	font-weight: bold;
+	line-height: 1.0em;
+	margin: 1.2em 0 0.3em;
+}
+.bluet_text_content h1 {
+	font-size: 3.0em;
+}
+.bluet_text_content h2 {
+	font-size: 2.25em;
+}
+.bluet_text_content h3 {
+	font-size: 1.5em;
+}
+.bluet_text_content h4 {
+	font-size: 1.25em;
+}
+.bluet_text_content h5 {
+	font-size: 1.125em;
+	margin: 1.3em 0 0;
+}
+.bluet_text_content h6 {
+	font-size: 1.0em;
+	margin: 1.3em 0 0;
+}
+.bluet_text_content ul {
+	list-style: square inside;
+	margin: 0 0 1.5em 2em;
+}
+.bluet_text_content ol {
+	list-style: decimal inside;
+	margin: 0 0 1.5em 2em;
+}
+.bluet_text_content ol ol {
+	list-style: upper-alpha inside;
+}
+.bluet_text_content ol ol ol {
+	list-style: lower-roman inside;
+}
+.bluet_text_content ol ol ol ol {
+	list-style: lower-alpha inside;
+}
+.bluet_text_content ul ul,
+.bluet_text_content ol ol,
+.bluet_text_content ul ol,
+.bluet_text_content ol ul {
+	margin-bottom: 0.2em;
+}
+.bluet_text_content table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ddd;
+	margin: 1em 0;
+	text-align: left;
+	width: 100%;
+}
+.bluet_text_content tr th,
+.bluet_text_content thead th {
+	background: #e5e5e5;
+	font-weight: bold;
+	padding: 0.2em 1em;
+}
+.bluet_text_content tr td {
+	border-top: 1px solid #ddd;
+	padding: 0.2em 1em;
+}
+.bluet_text_content tr.alternate td {
+	background: #f5f5f5;
+}
+
+/* Images | Gallery | Videos
+-------------------------------------------------------------- */
+.bluet_text_content img {
+	max-width: 100%;
+	height: auto;
+}
+
+.ssba.ssba-wrap {
+    margin-bottom: -20px;
+    margin-top: -15px;
+}
