@@ -12,7 +12,7 @@
 		
 		endif; ?>
 
-		<?php if(is_active_sidebar('sidebar-below-single')){dynamic_sidebar('sidebar-below-single');} ?>			
+		<?php if(is_active_sidebar('sidebar-below-single')){dynamic_sidebar('sidebar-below-single');} ?>
 
 		<?php comments_template(); ?>
 		

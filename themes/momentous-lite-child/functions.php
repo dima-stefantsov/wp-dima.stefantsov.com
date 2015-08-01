@@ -239,12 +239,22 @@ function child_momentous_register_sidebars() {
 	register_sidebar( array(
 		'name' => __( 'Below post or other single', 'momentous-lite'),
 		'id' => 'sidebar-below-single',
-		'description' => __( 'Appears below posts and pages.', 'momentous-lite'),
+		'description' => __( 'Appears below posts.', 'momentous-lite'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
-	));	
+	));
+
+	register_sidebar( array(
+	'name' => __( 'Under title inline sidebar', 'momentous-lite'),
+	'id' => 'sidebar-under-title-inline-single',
+	'description' => __( 'Appears inline under posts title.', 'momentous-lite'),
+	'before_widget' => '<div id="%1$s" class="widget-inline %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="widgettitle-inline"><span>',
+	'after_title' => '</span></h3>',
+	));
 }
 add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
