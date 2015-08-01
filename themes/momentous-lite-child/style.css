@@ -246,3 +246,96 @@ clear: both;
 .rpwe-clearfix{
 zoom: 1;
 }
+
+
+
+
+
+
+
+.wbounce-modal {
+    overflow: inherit !important;
+    font-family: inherit !important;
+}
+.wbounce-modal.underlay {
+    cursor: inherit !important;
+}
+.wbounce-modal .modal-body {
+    font-size: inherit !important;
+}
+.wbounce-modal form {
+    text-align: inherit !important;
+    margin-top: inherit !important;
+}
+.wbounce-modal form p {
+    opacity: inherit !important;
+    margin-left: inherit !important;
+    opacity: inherit !important;
+    margin-top: inherit !important;
+    padding-top: inherit !important;
+    font-size: inherit !important;
+}
+.wbounce-modal .wbounce-modal-sub {
+      border-radius: 0;
+}
+.wbounce-modal form input[type=text] {
+}
+.wbounce-modal form input[type=submit] {
+  font-weight: inherit !important;
+  padding: 12px;
+  font-size: 1.2em !important;
+  background-color: #22a8d8 !important;
+}
+.wbounce-modal form input[type=submit]:hover {
+	background-color: #333 !important;
+}
+
+.dbounce p.wysija-paragraph {
+    display: inline-block !important;
+    margin-bottom: 5px !important;
+}
+.dbounce input.wysija-submit {
+    display: inline-block !important;
+}
+
+.dbounce {
+    text-align: left;
+}
+.dbounce h2 {  
+    font-size: 2.3em;
+    margin-bottom: 1em;
+}
+.dbounce p {
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+    color: black !important;
+}
+
+.dbounce-nomarginbot,
+p.dbounce-nomarginbot,
+.dbounce p.dbounce-nomarginbot {
+    margin-bottom: 0;
+}
+
+.dbounce-pleasure,
+.wbounce-modal p.dbounce-pleasure {
+    color: deeppink !important;
+}
+
+.dbounce-smallbox {
+    width: 300px;
+}
+.dbounce-smallbox p {
+    font-size: 0.8em;
+    color: #777 !important;
+    margin-left: 12px;
+}
+
+.dbounce-respect {
+    text-align: right;
+    line-height: 1em;
+}
+
+#dbounce-head {
+      margin-left: 109px;
+}
