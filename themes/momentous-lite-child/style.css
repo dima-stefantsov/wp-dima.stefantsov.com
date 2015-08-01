@@ -346,3 +346,8 @@ p.dbounce-nomarginbot,
 .post-pagination .dots {
     margin-right: 0.8em;
 }
+
+pre.search-stats {
+	line-height: 0.8em;
+	margin-bottom: 1em;
+}
