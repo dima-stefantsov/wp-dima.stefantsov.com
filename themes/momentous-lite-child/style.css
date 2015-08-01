@@ -339,3 +339,10 @@ p.dbounce-nomarginbot,
 #dbounce-head {
       margin-left: 109px;
 }
+
+
+
+
+.post-pagination .dots {
+    margin-right: 0.8em;
+}
