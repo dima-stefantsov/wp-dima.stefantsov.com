@@ -351,3 +351,9 @@ pre.search-stats {
 	line-height: 0.8em;
 	margin-bottom: 1em;
 }
+
+.widget.entry {
+	margin-bottom: 1.5em;
+	padding: 1em;
+	background: #fff;
+}
