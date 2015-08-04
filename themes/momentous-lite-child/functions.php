@@ -260,6 +260,84 @@ add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
 wp_enqueue_script('child-momentous-lite-dindex-js', get_stylesheet_directory_uri() .'/js/index.js', array('jquery'));
 
+add_action('wp_footer','d_yandex_metrika');
+function d_yandex_metrika() {
+	if (function_exists('get_field') && get_field("hide_metrika")) {
+		return;
+	}
+
+    echo '
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter31383978 = new Ya.Metrika({
+                        id:31383978,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true
+                    });
+                } catch(e) { }
+            });
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/31383978" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    ';
+}
+
+// ACF Advanced Custom Fields
+add_action('wp_head','d_head');
+function d_head() {
+	if(function_exists('get_field') && get_field("head")) {
+		the_field("head");
+	}
+}
+
+add_action('wp_head','d_head_css');
+function d_head_css() {
+	if(function_exists('get_field') && get_field("css")) {
+		echo "<style>". get_field("css") ."</style>";
+	}
+}
+
+add_action('wp_footer','d_footer');
+function d_footer() {
+	if(function_exists('get_field') && get_field("footer")) {
+		the_field("footer");
+	}
+}
+
+add_action('wp_footer','d_footer_jquery_ready');
+function d_footer_jquery_ready() {
+	if(function_exists('get_field') && get_field("js_ready")) {
+		echo "<script>jQuery(document).ready(function($){". get_field("js_ready") ."});</script>";
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
