@@ -357,3 +357,11 @@ pre.search-stats {
 	padding: 1em;
 	background: #fff;
 }
+
+/*Stick footer to bottom, MUST KNOW MENU AND FOOTER HEIGHT!*/
+#wrap {
+	min-height: calc(100vh - 278px);
+}
+body.admin-bar {
+	margin-top: -32px;
+}
