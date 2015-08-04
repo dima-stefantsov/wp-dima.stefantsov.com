@@ -19,19 +19,6 @@
 
     <div id="header-wrap">
     
-        <?php // Display Search Form
-        if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
-            
-            <div id="header-search-wrap">
-            
-                <div id="header-search" class="container clearfix">
-                    <?php get_search_form(true); ?>
-                </div>
-                
-            </div>
-
-        <?php endif; ?>
-            
         <header id="header" class="container clearfix" role="banner">
 
             <div id="logo">
@@ -73,6 +60,15 @@
             </div>
 
         </header>
+
+        <?php // Display Search Form
+        if ( isset($theme_options['header_search']) and $theme_options['header_search'] == true ) : ?>
+            <div id="header-search-wrap">
+                <div id="header-search" class="container clearfix">
+                    <?php get_search_form(true); ?>
+                </div>
+            </div>
+        <?php endif; ?>
         
         <div id="navigation-wrap">
             

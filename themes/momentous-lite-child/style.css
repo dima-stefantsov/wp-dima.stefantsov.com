@@ -365,3 +365,28 @@ pre.search-stats {
 body.admin-bar {
 	margin-top: -32px;
 }
+
+#social-icons-menu li a[href*="vk.com"]:before {
+	content: '\f471';
+	font-size: 1.8em;
+	line-height: 8px;
+	margin-right: -6px;
+}
+#social-icons-menu li a {
+	padding-bottom: 1em !important;
+}
+/* Smartphones | <480px */
+@media only screen and (max-width: 30em) {
+	#navi-social-icons #social-icons-menu li a {
+		padding-bottom: 0.6em !important;
+	}
+}
+
+#header-search .search-form .search-field {
+    color: #333 !important;
+    background-color: white !important;
+    border: #22A8D8 4px solid !important;
+}
+#header-search .search-form .search-submit {
+    padding: 1em 1em 0 0 !important;
+}
