@@ -260,13 +260,25 @@ add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
 wp_enqueue_script('child-momentous-lite-dindex-js', get_stylesheet_directory_uri() .'/js/index.js', array('jquery'));
 
-add_action('wp_footer','d_yandex_metrika');
-function d_yandex_metrika() {
+add_action('wp_footer','d_metrika');
+function d_metrika() {
 	if (function_exists('get_field') && get_field("hide_metrika")) {
 		return;
 	}
 
-    echo '
+    echo "
+
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-65975495-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+	".'
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
