@@ -343,16 +343,64 @@ function d_footer_jquery_ready() {
 }
 
 
+// Mailpoet
+/**
+ * function to return an undo unsbscribe string for MailPoet newsletters
+ * you could place it in the functions.php of your theme
+ * @return string
+ */
+add_shortcode('d_mailpoet_undo_unsubscribe', 'mailpoet_get_undo_unsubscribe');
+function mailpoet_get_undo_unsubscribe() {
+	if(class_exists('WYSIJA') && !empty($_REQUEST['wysija-key'])) {
+        $undo_paramsurl = array(
+	        'wysija-page'=>1,
+	        'controller'=>'confirm',
+	        'action'=>'undounsubscribe',
+	        'wysija-key'=>$_REQUEST['wysija-key']
+	        );
+
+        $model_config = WYSIJA::get('config','model');
+        $link_undo_unsubscribe = WYSIJA::get_permalink($model_config->getValue('confirmation_page'),$undo_paramsurl);
+
+        $undo_unsubscribe = str_replace(
+	        array('[link]','[/link]'),
+	        array('<a href="'.$link_undo_unsubscribe.'">','</a>'),
+			'<br/><p><strong>Отписались по ошибке? [link]Восстановить подписку[/link].</strong><p>');
+
+        return $undo_unsubscribe;
+    }
+    return '';
+}
+
+/**
+ * This is an example of a custom shortcode parser.
+ * It's really easy to implement.
+ * We already automatically parse all shortcodes with this notation for you: [custom:my_value]
+ * You just have to add a filter and return the value you prefer.
+ * In the following example we added [custom:my_name] and [custom:blog_name] to our newsletter.
+ * We have now to return the preferred values, as string.
+ */
+// [custom:my_name]
+// [custom:blog_name]
+add_filter('wysija_shortcodes', 'mailpoet_shortcodes_custom_filter', 10, 2);
+function mailpoet_shortcodes_custom_filter($tag_value, $user_id) {
+ 
+    // $tag_value contains the string after custom:
+    // This function will be called the first time with $tag_value = my_name
+    // The second time with $tag_value = blog_name
+ 
+    // $user_id contains the corresponding MailPoet's subscriber id,
+    // this could be useful to fetch extra data from the WordPress user's meta for instance
+    // e.g.: https://gist.github.com/benheu/cf9eb925b0e17e6dbd6c
+ 
+    if ($tag_value === 'test') {
+        $replacement = 'test: OK!';
+    }
+    else if ($tag_value === 'blog_name') {
+        $replacement = get_bloginfo('name');
+    }
+ 
+    return $replacement;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-?>
