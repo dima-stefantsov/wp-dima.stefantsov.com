@@ -174,7 +174,9 @@ function momentous_display_pagination() {
 	endif;
 }
 
-
+// Disable displaying custom header featured image for pages.
+// At least for now. It looked beautiful.
+function momentous_display_custom_header() {}
 
 
 
