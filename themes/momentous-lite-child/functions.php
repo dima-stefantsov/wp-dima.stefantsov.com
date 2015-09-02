@@ -403,4 +403,6 @@ function mailpoet_shortcodes_custom_filter($tag_value, $user_id) {
     return $replacement;
 }
 
-
+// SNAP
+// Increased http request timeout from default 5 to 10 for wordpress, used by SNAP too.
+add_filter('http_request_timeout', function(){return 10;});
