@@ -21,6 +21,8 @@
 
 					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 					
+					<?php the_widget( 'WP_Widget_Pages' ); ?>
+					
 				</div>
 				
 			</div>
