@@ -200,11 +200,19 @@ function momentous_display_custom_header() {}
 
 // Localization.
 add_filter( 'get_the_archive_title', function ($title) {
-    if ( is_category() ) {
+    if (is_category()) {
 		$title = sprintf("Тема: <span>%s</span>", single_cat_title('', false));
-	} elseif ( is_tag() ) {
+		if(category_description()) {
+			$title .= '<div class="archive-description">' . category_description() . '</div>';
+		}
+
+	} elseif (is_tag()) {
 		$title = sprintf("Тег: <span>%s</span>", single_tag_title('', false));
-	} elseif ( is_month() ) {
+		if(tag_description()) {
+			$title .= '<div class="archive-description">' . tag_description() . '</div>';
+		}
+
+	} elseif (is_month()) {
         $title = sprintf("Архив за <span>%s</span>", get_the_date('F Y'));
     }
 
