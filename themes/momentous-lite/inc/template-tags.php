@@ -255,9 +255,9 @@ add_action( 'momentous_credit_link', 'momentous_display_credit_link' );
 
 function momentous_display_credit_link() { 
 		
-	printf(__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
-		sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'momentous-lite' ) ),
-		sprintf( '<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">%s</a>', __( 'Momentous', 'momentous-lite' ) )
+	printf( __( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
+		'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+		'<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
 	); 
 }
 
@@ -286,7 +286,7 @@ function momentous_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" theme location.', 'momentous-lite'); ?>
+			<?php _e('Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'momentous-lite'); ?>
 		</p>
 <?php
 	endif;

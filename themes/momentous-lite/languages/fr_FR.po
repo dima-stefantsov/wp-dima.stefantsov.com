@@ -1,23 +1,25 @@
-# Translation of Momentous in Italian
-# This file is distributed under the same license as the Momentous package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Momentous\n"
+"Project-Id-Version: Momentous Lite\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
 "POT-Creation-Date: 2015-08-29 14:30+0100\n"
 "PO-Revision-Date: 2015-08-29 14:54+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
+"Language-Team: ThemeZee <contact@themezee.com>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;_x;_ex;_n;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: 404.php:9
 #, fuzzy
 msgid "404: Page not found"
-msgstr "Errore 404: Non trovato"
+msgstr "Erreur 404 : Introuvable"
 
 #: 404.php:12
 msgid ""
@@ -27,69 +29,69 @@ msgstr ""
 
 #: comments.php:13
 msgid "Enter password to view comments."
-msgstr "Inserire la password per visualizzare i commenti."
+msgstr "Entrez le mot de passe pour voir les commentaires."
 
 #: comments.php:23
 msgid "One comment"
-msgstr "Un commento"
+msgstr "Un commentaire"
 
 #: comments.php:23
 #, php-format
 msgid "% comments"
-msgstr "% commenti"
+msgstr "% commentaires"
 
 #: comments.php:40
 msgid "Leave a Reply"
-msgstr ""
+msgstr "Ajouter un Commentaire"
 
 #: content-one-column.php:12 content.php:14 featured-content.php:44
 msgid "Continue reading &raquo;"
-msgstr ""
+msgstr "Suite &raquo;"
 
 #: functions.php:124
 msgid "Main Navigation"
-msgstr "Principale"
+msgstr "Menu Principal"
 
 #: functions.php:125
 msgid "Top Navigation"
-msgstr ""
+msgstr "Menu haut"
 
 #: functions.php:126
 msgid "Social Icons"
-msgstr "Social Icons"
+msgstr "Icones Sociales"
 
 #: functions.php:158 sidebar.php:14
 msgid "Sidebar"
-msgstr "Barra laterale"
+msgstr "Barre latérale"
 
 #: functions.php:160
 #, fuzzy
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
-"Compare su articoli e pagine ad eccezione dei template Frontpage e FullWidth."
+"Apparait sur les articles et pages sauf la page principale en pleine largeur."
 
 #: functions.php:240
 msgid "Pingback:"
-msgstr "Pingback:"
+msgstr "Rétrolien :"
 
 #: functions.php:241 functions.php:259
 msgid "(Edit)"
-msgstr "(Modifica)"
+msgstr "(Edition)"
 
 #: functions.php:258
 #, php-format
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s à %2$s"
 
 #: functions.php:269
 msgid "Your comment is awaiting moderation."
-msgstr "Il tuo commento è in attesa di approvazione."
+msgstr "Votre commentaire est en attente de modération."
 
 #: search.php:12
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Risultati della ricerca per: %s"
+msgstr "Résultat de la recherche pour : %s"
 
 #: search.php:34
 msgid "No matches"
@@ -100,14 +102,14 @@ msgstr ""
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
-"Nessun risultato. Riprova o usa i menù di navigazione per trovare quello che "
-"stai cercando."
+"Aucun résultats. Veuillez réessayer ou utiliser le menu pour trouver ce que "
+"vous chercher."
 
 #: searchform.php:4
 #, fuzzy
 msgctxt "label"
 msgid "Search for:"
-msgstr "Cerca:"
+msgstr "Recherche :"
 
 #: searchform.php:5
 msgctxt "placeholder"
@@ -121,7 +123,7 @@ msgstr ""
 
 #: inc/featured-content.php:348
 msgid "Featured Content"
-msgstr "Contenuto da promuovere"
+msgstr "Contenu à la Une"
 
 #: inc/featured-content.php:349
 #, php-format
@@ -130,20 +132,22 @@ msgid ""
 "tag of your choice. Your theme supports up to %2$s posts in its featured "
 "content area."
 msgstr ""
+"Mettez un article à la une facilement avec le tag <a href=\"%1$s\">\"featured"
+"\" tag</a> ou celui de votre choix.  Votre thème supporte jusqu'à %2$s "
+"articles mis en avant."
 
 #: inc/featured-content.php:376
-#, fuzzy
 msgid "Tag name"
-msgstr "Nome tag"
+msgstr "Tag"
 
 #: inc/featured-content.php:381
 msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
+"Ne pas afficher les tags suivant des metas des articles ou du nuage de tag."
 
 #: inc/featured-content.php:387
-#, fuzzy
 msgid "Display featured posts in latest blog post listing."
-msgstr "Visualizza immagini in evidenza nei singoli articoli"
+msgstr "Affiche les articles à la une dans la liste des derniers articles."
 
 #: inc/template-tags.php:62
 #, php-format
@@ -151,6 +155,8 @@ msgid ""
 "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
 "\"entry-date published updated\" datetime=\"%3$s\">%4$s</time></a>"
 msgstr ""
+"Posté le <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date published updated\" datetime=\"%3$s\">%4$s</time></a>"
 
 #: inc/template-tags.php:77
 #, php-format
@@ -158,16 +164,18 @@ msgid ""
 "by <span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s\" "
 "rel=\"author\">%3$s</a></span>"
 msgstr ""
+"par <span class=\"author vcard\"><a class=\"fn\" href=\"%1$s\" title=\"%2$s"
+"\" rel=\"author\">%3$s</a></span>"
 
 #: inc/template-tags.php:79
 #, php-format
 msgid "View all posts by %s"
-msgstr "Visualizza tutti gli articoli di %s"
+msgstr "Voir tous les articles de %s"
 
 #: inc/template-tags.php:258
 #, php-format
 msgid "Powered by %1$s and %2$s."
-msgstr "Powered by %1$s e %2$s."
+msgstr "Propulsé par %1$s et %2$s."
 
 #: inc/template-tags.php:289
 #, fuzzy
@@ -176,27 +184,27 @@ msgid ""
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
-"Vai in WP-Admin → Aspetto → Menu e crea un nuovo menu personalizzato con i "
-"link ai tuoi social networks. Poi clicca su \"Gestisci disposizione\" e "
-"assegna il menù appena creato a \"Social Icons\"."
+"Veuillez aller dans WP-Admin-> Apparence-> Menus et creez un nouveau menu "
+"personnel avec les lien vers vos réseaux sociaux. Puis dans l'onglet \"Gérer "
+"les emplacements\", assignez ce menu à l'emplacement \"Icones Sociale\"."
 
 #: inc/theme-info.php:18 inc/theme-info.php:38
 #, fuzzy, php-format
 msgid "Welcome to %1$s %2$s"
-msgstr "Benvenuto a %1s %2s"
+msgstr "Bienvenue sur %1s %2s"
 
 #: inc/theme-info.php:19
 msgid "Theme Info"
-msgstr "Info tema"
+msgstr "Informations du Thème"
 
 #: inc/theme-info.php:44
 msgid "Important Links:"
-msgstr "Link importanti:"
+msgstr "Liens Importants :"
 
 #: inc/theme-info.php:45
 #, fuzzy
 msgid "Theme Page"
-msgstr "Pagina di informazioni sul tema"
+msgstr "Page d'Informatin du Thème"
 
 #: inc/theme-info.php:46
 msgid "Changelog"
@@ -204,20 +212,20 @@ msgstr "Changelog"
 
 #: inc/theme-info.php:47
 msgid "Theme Demo"
-msgstr "Demo del tema"
+msgstr "Démo du Thème"
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
 msgid "Theme Documentation"
-msgstr "Documentazione del tema"
+msgstr "Documentation du Thème"
 
 #: inc/theme-info.php:49
 msgid "Rate this theme"
-msgstr ""
+msgstr "Notez ce thème"
 
 #: inc/theme-info.php:56
 #, php-format
 msgid "Getting Started with %s"
-msgstr "Inizia con %s"
+msgstr "Démarrez avec %s"
 
 #: inc/theme-info.php:66
 #, fuzzy
@@ -225,134 +233,140 @@ msgid ""
 "You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
-"Hai bisogno di aiuto ad impostare e configurare questo tema? Puoi trovare "
-"tutta la documentazione di cui necessiti sul nostro sito web."
+"Besoin d'aide pour installer et configurer ce thème? Nous avons une "
+"documentation complète sur notre site web."
 
 #: inc/theme-info.php:70
 #, fuzzy, php-format
 msgid "View %s Documentation"
-msgstr "Documentazione del tema"
+msgstr "Documentation du Thème"
 
 #: inc/theme-info.php:76 inc/customizer/customizer.php:27
 msgid "Theme Options"
-msgstr "Opzioni del tema"
+msgstr "Options du Thème"
 
 #: inc/theme-info.php:79
-#, php-format
+#, fuzzy, php-format
 msgid ""
 "%s makes use of the Customizer for all theme settings. Click on \"Customize "
 "Theme\" to open the Customizer now."
 msgstr ""
+"Momentous supporte le Theme Customizer pour tous les paramêtres. Cliquez sur "
+"\"Personnaliser le Thème\" pour ouvrir le Customizer"
 
 #: inc/theme-info.php:82
 msgid "Customize Theme"
-msgstr "Personalizza  Tema"
+msgstr "Personnaliser le Thème"
 
 #: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:14
+#, fuzzy
 msgid "Pro Version"
-msgstr ""
+msgstr "Version PRO"
 
 #: inc/theme-info.php:90
+#, fuzzy
 msgid ""
 "You need more features? Purchase the Pro Version to get additional features "
 "and advanced customization options."
 msgstr ""
+"Besoin de plus de fonctionnalités? Regardez notre version PRO qui ajoute de "
+"nouvelles fonctionnalités et des options de personnalisation avancées"
 
 #: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:62
-#, php-format
+#, fuzzy, php-format
 msgid "Learn more about %s Pro"
-msgstr ""
+msgstr "En savoir plus sur la version PRO"
 
 #: inc/theme-info.php:115
-#, php-format
+#, fuzzy, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
-msgstr ""
+msgstr "Momentous est développé par %1s. Si vous aimez ce thème, %2s :) "
 
 #: inc/theme-info.php:118
 msgid "rate it"
-msgstr ""
+msgstr "notez le"
 
 #: inc/customizer/customizer.php:48
 msgid "Display Tagline below site title."
-msgstr "Visualizza Tagline sotto il titolo del sito."
+msgstr "Affiche les tags sous le titre du site."
 
 #: inc/customizer/default-options.php:34
 #: inc/customizer/sections/customizer-general.php:43
 msgid "Latest Posts"
-msgstr ""
+msgstr "Derniers articles"
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
-msgstr "Impostazioni generali"
+msgstr "Paramêtres généraux"
 
 #: inc/customizer/sections/customizer-general.php:29
 msgid "Theme Layout"
-msgstr ""
+msgstr "Disposition du thème"
 
 #: inc/customizer/sections/customizer-general.php:35
 msgid "Left Sidebar"
-msgstr "Barra laterale sinistra"
+msgstr "Barre de Gauche"
 
 #: inc/customizer/sections/customizer-general.php:36
 msgid "Right Sidebar"
-msgstr "Barra laterale destra"
+msgstr "Barre de Droite"
 
 #: inc/customizer/sections/customizer-general.php:50
 msgid "Title above Latest Posts"
-msgstr ""
+msgstr "Titre au dessus des derniers articles"
 
 #: inc/customizer/sections/customizer-general.php:67
 msgid "Footer Text"
-msgstr "Testo del Footer"
+msgstr "Texte du Pied de Page"
 
 #: inc/customizer/sections/customizer-general.php:85
 msgid "Default Fonts"
-msgstr ""
+msgstr "Police par défaut"
 
 #: inc/customizer/sections/customizer-general.php:102
 msgid "Deactivate Google Fonts in case your language is not compatible."
-msgstr ""
+msgstr "Désactive les polices google si votre langue n'est pas compatible."
 
 #: inc/customizer/sections/customizer-header.php:14
 #: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
-msgstr "Contenuto dell'intestazione"
+msgstr "Contenu de l'entête de page"
 
 #: inc/customizer/sections/customizer-header.php:47
 msgid "Activate dropdown search field on header area"
-msgstr ""
+msgstr "Active le champs de recherche dans le header"
 
 #: inc/customizer/sections/customizer-header.php:63
 msgid "Display Social Icons on main navigation"
-msgstr ""
+msgstr "Affiche les icones sociales dans le menu principale"
 
 #: inc/customizer/sections/customizer-post.php:14
 msgid "Post Settings"
-msgstr "Impostazioni degli articoli"
+msgstr "Configuration des Articles"
 
 #: inc/customizer/sections/customizer-post.php:29
 msgid "Post Layout"
-msgstr ""
+msgstr "Disposition des articles"
 
 #: inc/customizer/sections/customizer-post.php:35
 msgid "One Column"
-msgstr ""
+msgstr "Une colonne"
 
 #: inc/customizer/sections/customizer-post.php:36
 msgid "Two Columns"
-msgstr ""
+msgstr "Deux Colonnes"
 
 #: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
-msgstr "Immagini degli articoli"
+msgstr "Images des Articles"
 
 #: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
-msgstr "Visualizza immagini in evidenza nelle pagine dell'archivio"
+msgstr "Affiche les images à la une sur les pages d'archive"
 
 #: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
-msgstr "Visualizza immagini in evidenza nei singoli articoli"
+msgstr "Affiche les images à la une sur la page d'un article"
 
 #: inc/customizer/sections/customizer-post.php:100
 msgid "Text after Excerpts"
@@ -361,12 +375,12 @@ msgstr ""
 #: inc/customizer/sections/customizer-post.php:115
 #, fuzzy
 msgid "Display [...] after excerpts"
-msgstr "Visualizza [...] dopo il testo dell'estratto."
+msgstr "Affiche [...] après le résumé."
 
 #: inc/customizer/sections/customizer-post.php:133
 #, fuzzy
 msgid "Post Meta"
-msgstr "Impostazioni degli articoli"
+msgstr "Configuration des Articles"
 
 #: inc/customizer/sections/customizer-post.php:148
 msgid "Display post date"
@@ -385,91 +399,96 @@ msgid "Display post tags"
 msgstr ""
 
 #: inc/customizer/sections/customizer-upgrade.php:30
+#, fuzzy
 msgid "You need more features?"
-msgstr ""
+msgstr "Besoin de fonctionnalités supplémentaires?"
 
 #: inc/customizer/sections/customizer-upgrade.php:46
+#, fuzzy
 msgid ""
 "Purchase the Pro Version to get additional features and advanced "
 "customization options."
 msgstr ""
+"Regardez notre version PRO qui ajoute de nouvelles fonctionnalités et des "
+"options de personnalisation avancées"
 
 #~ msgid ""
 #~ "The page you trying to reach does not exist, or has been moved. Please "
 #~ "use the menus or the search box to find what you are looking for"
 #~ msgstr ""
-#~ "La pagina richiesta non esiste o è stata spostata. Usa i menù di "
-#~ "navigazione o lo strumento di ricerca per trovare quello che stai "
-#~ "cercando."
+#~ "La page que vous essayez d'atteindre n'existe pas ou a été déplacée. "
+#~ "Veuillez utiliser les menus ou la boîte de recherche pour trouver ce que "
+#~ "vous cherchez"
 
 #~ msgid "Search"
-#~ msgstr "Cerca"
+#~ msgstr "Rechercher"
 
 #~ msgid "Recent Posts"
-#~ msgstr "Articoli recenti"
+#~ msgstr "Articles récents"
 
 #~ msgid "Pages"
-#~ msgstr "Pagine"
+#~ msgstr "Pages"
 
 #~ msgid "Monthly Archives: %s"
-#~ msgstr "Articoli del mese: %s"
+#~ msgstr "Archives du mois : %s"
 
 #~ msgid "F Y"
 #~ msgstr "F Y"
 
 #~ msgid "Archives"
-#~ msgstr "Archivio"
+#~ msgstr "Archives"
 
 #~ msgid "Author Archives: %s"
-#~ msgstr "Archivio Autori: %s"
+#~ msgstr "Archives d’auteur : %s"
 
 #~ msgid "Category Archives: %s"
-#~ msgstr "Archivio Categorie: %s"
+#~ msgstr "Archives de la catégorie : %s"
 
-#~ msgid "Page %s"
-#~ msgstr "Pagina %s"
+#~ msgid "Leave a Reply to %s"
+#~ msgstr "Ajouter une Réponse à %s"
 
-#~ msgid "WordPress"
-#~ msgstr "WordPress"
+#~ msgid "<span class=\"fn\">%s</span>"
+#~ msgstr "<span class=\"fn\">%s</span>"
 
 #~ msgid "Previous"
-#~ msgstr "Precedente"
+#~ msgstr "Précédent"
 
 #~ msgid "Next"
-#~ msgstr "Successivo"
+#~ msgstr "Suivant"
 
 #~ msgid "Return to Gallery"
-#~ msgstr "Torna alla Galleria"
+#~ msgstr "Retour à la gallerie"
 
 #~ msgid "Return to"
-#~ msgstr "Torna a"
+#~ msgstr "Retour à"
 
 #~ msgid "Widget Area"
-#~ msgstr "Area Widget"
+#~ msgstr "Zone de widget"
 
 #~ msgid ""
 #~ "There are no active widgets to be displayed. Please go to Appearance -> "
 #~ "Widgets to setup your sidebar."
 #~ msgstr ""
-#~ "Non ci sono widget attivi da visualizzare. Vai in Aspetto → Widgets per "
-#~ "impostare la tua sidebar."
+#~ "Il n'y a pas de widget actif. Veuillez aller dans Apparence -> Widgets "
+#~ "pour configurer votre barre latérale."
 
 #~ msgid "Tag Archives: %s"
-#~ msgstr "Tag Archivio: %s"
+#~ msgstr "Archives du tag : %s"
 
-#~ msgid ""
-#~ "Use a <a href=\"%1$s\">tag</a> to feature your posts. If no posts match "
-#~ "the tag, <a href=\"%2$s\">sticky posts</a> will be displayed instead."
-#~ msgstr ""
-#~ "Usa un <a href=\"%1$s\">tag</a> per promuovere i tuoi articoli. Se nessun "
-#~ "post combacia con il tag, verrà visualizzato <a href=\"%2$s\">articoli in "
-#~ "evidenza</a>."
+#~ msgid "WordPress"
+#~ msgstr "WordPress"
 
-#~ msgid "featured"
-#~ msgstr "da promuovere"
+#~ msgid "Momentous"
+#~ msgstr "Momentous"
 
-#~ msgid "Don&rsquo;t display tag on front end."
-#~ msgstr "Nascondi il tag nel front end."
+#~ msgid "Welcome to Momentous"
+#~ msgstr "Bienvenue sur Momentous"
+
+#~ msgid "Visit Momentous Documentation"
+#~ msgstr "Voir la Documentation de Momentous"
+
+#~ msgid "Learn more about the PRO Version of Momentous"
+#~ msgstr "En savoir plus sur la version PRO de Momentous"
 
 #~ msgid "Excerpt More Text"
-#~ msgstr "Testo aggiuntivo dell'estratto"
+#~ msgstr "Texte supplémentaire du résumé"
