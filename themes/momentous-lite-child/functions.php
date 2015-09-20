@@ -200,7 +200,23 @@ function momentous_display_custom_header() {}
 
 // Localization.
 add_filter( 'get_the_archive_title', function ($title) {
-    if (is_category()) {
+    if(is_category() && is_tag()) {
+    	$tag = get_tag(get_query_var('tag_id'));
+    	$category = get_category(get_query_var('cat'));
+    	$title = sprintf(
+    		'Статьи с темой <a href="%s" title="%s"><span>%s</span></a> и тегом <a href="%s" title="%s"><span>%s</span></a>',
+    		get_category_link($category->term_id),
+    		plural($category->category_count, '%d статья', '%d статьи', '%d статей'),
+    		$category->name,
+    		get_tag_link($tag->term_id),
+    		plural($tag->count, '%d статья', '%d статьи', '%d статей'),
+    		$tag->name);
+
+		if(tag_description($tag->term_id)) {
+			$title .= '<div class="archive-description">' . tag_description($tag->term_id) . '</div>';
+		}
+    }
+    else if (is_category()) {
 		$title = sprintf("Тема: <span>%s</span>", single_cat_title('', false));
 		if(category_description()) {
 			$title .= '<div class="archive-description">' . category_description() . '</div>';
@@ -414,3 +430,21 @@ function mailpoet_shortcodes_custom_filter($tag_value, $user_id) {
 // SNAP
 // Increased http request timeout from default 5 to 10 for wordpress, used by SNAP too.
 add_filter('http_request_timeout', function(){return 10;});
+
+/*
+ * $num число, от которого будет зависеть форма слова
+ * $form_for_1 первая форма слова, например Товар
+ * $form_for_2 вторая форма слова - Товара
+ * $form_for_5 третья форма множественного числа слова - Товаров
+ */
+function plural($num, $form_for_1, $form_for_2, $form_for_5){
+    $num = abs($num) % 100; // берем число по модулю и сбрасываем сотни (делим на 100, а остаток присваиваем переменной $num)
+    $num_x = $num % 10; // сбрасываем десятки и записываем в новую переменную
+    if ($num > 10 && $num < 20) // если число принадлежит отрезку [11;19]
+        return sprintf($form_for_5, $num);
+    if ($num_x > 1 && $num_x < 5) // иначе если число оканчивается на 2,3,4
+        return sprintf($form_for_2, $num);
+    if ($num_x == 1) // иначе если оканчивается на 1
+        return sprintf($form_for_1, $num);
+    return sprintf($form_for_5, $num);
+}
