@@ -247,7 +247,17 @@ class UTCW_Render
 
         switch ($this->config->title_type) {
             case 'counter':
-                $title = $this->plural($term->count, '%d статья', '%d статьи', '%d статей');
+                $description = term_description($term->term_id);
+                if($description) {
+                    $title =
+                            wp_strip_all_tags($description) .
+                            "\n\n" .
+                            $this->plural($term->count, '%d статья', '%d статьи', '%d статей');;
+                }
+                else {
+                    $title = $this->plural($term->count, '%d статья', '%d статьи', '%d статей');
+                }
+                
                 if (strpos($title, '%d') !== false) {
                     $title = sprintf(' title="' . $title . '"', $term->count);
                 }
