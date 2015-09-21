@@ -247,20 +247,13 @@ class UTCW_Render
 
         switch ($this->config->title_type) {
             case 'counter':
+                $title = $this->plural($term->count, '%d статья', '%d статьи', '%d статей');
                 $description = term_description($term->term_id);
                 if($description) {
-                    $title =
-                            wp_strip_all_tags($description) .
-                            "\n\n" .
-                            $this->plural($term->count, '%d статья', '%d статьи', '%d статей');;
-                }
-                else {
-                    $title = $this->plural($term->count, '%d статья', '%d статьи', '%d статей');
+                    $title = wp_strip_all_tags($description) . "\n\n" . $title;
                 }
                 
-                if (strpos($title, '%d') !== false) {
-                    $title = sprintf(' title="' . $title . '"', $term->count);
-                }
+                $title = ' title="' . $title . '"';
                 break;
 
             case 'name':
@@ -298,16 +291,16 @@ class UTCW_Render
      * $form_for_2 вторая форма слова - Товара
      * $form_for_5 третья форма множественного числа слова - Товаров
      */
-    private function plural($num, $form_for_1, $form_for_2, $form_for_5){
+    function plural($num, $form_for_1, $form_for_2, $form_for_5){
         $num = abs($num) % 100; // берем число по модулю и сбрасываем сотни (делим на 100, а остаток присваиваем переменной $num)
         $num_x = $num % 10; // сбрасываем десятки и записываем в новую переменную
         if ($num > 10 && $num < 20) // если число принадлежит отрезку [11;19]
-            return $form_for_5;
+            return sprintf($form_for_5, $num);
         if ($num_x > 1 && $num_x < 5) // иначе если число оканчивается на 2,3,4
-            return $form_for_2;
+            return sprintf($form_for_2, $num);
         if ($num_x == 1) // иначе если оканчивается на 1
-            return $form_for_1;
-        return $form_for_5;
+            return sprintf($form_for_1, $num);
+        return sprintf($form_for_5, $num);
     }
 
 }
