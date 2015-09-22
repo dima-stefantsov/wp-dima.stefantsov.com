@@ -61,6 +61,7 @@ function child_momentous_display_site_title() { ?>
 <?php
 }
 
+add_action( 'after_setup_theme', 'remove_parent_theme_features');
 function remove_parent_theme_features() {
 	remove_action( 'momentous_credit_link', 'momentous_display_credit_link' );
     add_action( 'momentous_credit_link', 'child_momentous_display_credit_link' );
@@ -68,7 +69,14 @@ function remove_parent_theme_features() {
     remove_action( 'momentous_site_title', 'momentous_display_site_title' );
     add_action( 'momentous_site_title', 'child_momentous_display_site_title' );
 }
-add_action( 'after_setup_theme', 'remove_parent_theme_features');	
+
+add_action( 'after_setup_theme', 'd_globals');
+function d_globals() {
+	// Set Content Width more than default 860.
+	global $content_width;
+	$content_width = 875;
+}
+
 
 
 
