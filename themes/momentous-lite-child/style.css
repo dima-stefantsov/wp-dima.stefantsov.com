@@ -440,3 +440,14 @@ body ul ul#ap-user-menu-link li > a:hover {
     background: #ddd;
 }
 
+.entry li, .comment li {
+    text-indent: -1em;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+#anspress .ap-ul-inline > li {
+    text-indent: initial;
+}
+#question .ap-post-history {
+    display: none;
+}
