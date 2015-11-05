@@ -398,3 +398,45 @@ body.admin-bar {
     font-weight: normal;
     font-size: 1.12em;
 }
+
+.ap-btn-toggle {
+  display: inline-block;
+}
+.ap-btn-toggle span {
+  font-size: 25px;
+  color: #888;
+  line-height: 1.6;
+}
+.ap-btn-toggle .apicon-toggle-on {
+  display: none;
+}
+.ap-btn-toggle .apicon-toggle-off {
+  display: inline;
+}
+.ap-btn-toggle.active .apicon-toggle-on {
+  display: inline;
+  color: #61c17d;
+}
+.ap-btn-toggle.active .apicon-toggle-off {
+  display: none;
+}
+.ap-btn-toggle:focus {
+  outline: none;
+}
+.ap-loading-icon {
+  background: none !important;
+  color: rgba(0, 0, 0) !important;
+}
+body ul ul#ap-notification-dropdown li {
+    color: black;
+}
+#topnav-menu .anspress-page-profile .ap-dropdown-menu a:link, #topnav-menu .anspress-page-profile .ap-dropdown-menu a:visited {
+    color: #333;
+}
+#topnav-menu a:hover {
+    text-decoration: none;
+}
+body ul ul#ap-user-menu-link li > a:hover {
+    background: #ddd;
+}
+
