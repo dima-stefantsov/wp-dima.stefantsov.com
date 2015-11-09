@@ -445,7 +445,9 @@ body ul ul#ap-user-menu-link li > a:hover {
     padding-left: 1em;
     margin-bottom: 1em;
 }
-#anspress .ap-ul-inline > li {
+#anspress .ap-ul-inline > li,
+#anspress .ap-commentlist > li,
+#anspress .ap-user li {
     text-indent: initial;
 }
 #question .ap-post-history {
