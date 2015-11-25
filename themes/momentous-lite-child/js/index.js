@@ -45,6 +45,8 @@
 	    ,'I find television very educating. Every time somebody turns on the set, I go into the other room and read a book.'
 	    ,'Life isn\'t about finding yourself. Life is about creating yourself.'
 	    ,'Knowing yourself is the beginning of all wisdom.'
+	    ,'Бойся равнодушных. Ибо с их молчаливого согласия совершаются все подлости в мире.'
+	    ,'Скромность красит человека. В серенький цвет.'
 	];  
 
 	function changeQuote(){
