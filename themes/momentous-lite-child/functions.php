@@ -9,13 +9,15 @@
 // The child theme's stylesheet is then enqueued later in the action hook my_theme_styles.
 // ========================
 
+// Filter get_stylesheet_uri() to return the parent theme's stylesheet 
+add_filter('stylesheet_uri', 'use_parent_theme_stylesheet');
 function use_parent_theme_stylesheet() {
     // Use the parent theme's stylesheet
     return get_template_directory_uri() . '/style.css';
 }
-// Filter get_stylesheet_uri() to return the parent theme's stylesheet 
-add_filter('stylesheet_uri', 'use_parent_theme_stylesheet');
 
+// Enqueue this theme's scripts and styles (after parent theme)
+add_action('wp_enqueue_scripts', 'my_theme_styles', 20);
 function my_theme_styles() {
     $themeVersion = wp_get_theme()->get('Version');
 
@@ -23,8 +25,6 @@ function my_theme_styles() {
     wp_enqueue_style('child-theme-style', get_stylesheet_directory_uri() . '/style.css',
         array(), $themeVersion);
 }
-// Enqueue this theme's scripts and styles (after parent theme)
-add_action('wp_enqueue_scripts', 'my_theme_styles', 20);
 
 
 
