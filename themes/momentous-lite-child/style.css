@@ -451,6 +451,6 @@ body ul ul#ap-user-menu-link li > a:hover {
 .entry li p, .comment li p {
     text-indent: initial;
 }
-#question .ap-post-history {
+.ap-q-inner .ap-post-history {
     display: none;
 }
