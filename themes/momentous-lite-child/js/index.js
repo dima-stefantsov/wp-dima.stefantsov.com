@@ -14,6 +14,12 @@
     // Append page url to copied text.
     document.addEventListener('copy', addLink);
     function addLink(event) {
+        // Do nothing if current user have admin-bar displayed.
+        if (document.body.classList.contains('admin-bar')){
+            return;
+        }
+
+        // Do nothing if both properties are not supported.
         if (!event.clipboardData && !window.clipboardData){
             return;
         }
@@ -77,6 +83,7 @@
         ,'Knowing yourself is the beginning of all wisdom.'
         ,'Бойся равнодушных. Ибо с их молчаливого согласия совершаются все подлости в мире.'
         ,'Скромность красит человека. В серенький цвет.'
+        ,'I disapprove of what you say, but I will defend to the death your right to say it.'
     ];  
 
     function changeQuote(){
