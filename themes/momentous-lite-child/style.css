@@ -454,3 +454,11 @@ body ul ul#ap-user-menu-link li > a:hover {
 .ap-q-inner .ap-post-history {
     display: none;
 }
+
+:target {
+    background-color: rgba(34, 168, 216, 0.1);
+    border: 3px dashed #22A8D8;
+}
+.target-id-fullwidth:target {
+    padding-left: 20px;
+}
