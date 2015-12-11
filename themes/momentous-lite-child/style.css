@@ -456,8 +456,8 @@ body ul ul#ap-user-menu-link li > a:hover {
 }
 
 :target {
-    background-color: rgba(34, 168, 216, 0.1);
-    border: 3px dashed #22A8D8;
+    background-color: rgba(34, 168, 216, 0.1) !important;
+    border: 3px dashed #22A8D8 !important;
 }
 .target-id-fullwidth:target {
     padding-left: 20px;
