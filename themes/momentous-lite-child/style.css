@@ -67,7 +67,7 @@ input, textarea {
 	min-width:350px;
 }
 #form-wysija-3 .wysija-input {
-	
+
 }
 #wysija-2 .widgettitle,
 #wysija-3 .widgettitle {
@@ -301,7 +301,7 @@ input, textarea {
 .dbounce {
     text-align: left;
 }
-.dbounce h2 {  
+.dbounce h2 {
     font-size: 2.3em;
     margin-bottom: 1em;
 }
@@ -488,4 +488,9 @@ div.ap-comment-header {
 }
 #anspress .ap-display-meta-item.history:before {
 	display: none;
+}
+
+#anspress .ap-q-content a:hover,
+#anspress .ap-q-content a:active {
+    text-decoration: underline;
 }
