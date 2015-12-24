@@ -9,7 +9,7 @@
 // The child theme's stylesheet is then enqueued later in the action hook my_theme_styles.
 // ========================
 
-// Filter get_stylesheet_uri() to return the parent theme's stylesheet 
+// Filter get_stylesheet_uri() to return the parent theme's stylesheet
 add_filter('stylesheet_uri', 'use_parent_theme_stylesheet');
 function use_parent_theme_stylesheet() {
     // Use the parent theme's stylesheet
@@ -49,8 +49,8 @@ function my_theme_styles() {
 // Replace parent functions.
 // =========================
 
-function child_momentous_display_credit_link() { 
-		
+function child_momentous_display_credit_link() {
+
 	printf('Сделано с любовью<a href="http://stefantsov.com">.</a>');
 }
 
@@ -65,7 +65,7 @@ add_action( 'after_setup_theme', 'remove_parent_theme_features');
 function remove_parent_theme_features() {
 	remove_action( 'momentous_credit_link', 'momentous_display_credit_link' );
     add_action( 'momentous_credit_link', 'child_momentous_display_credit_link' );
-    
+
     remove_action( 'momentous_site_title', 'momentous_display_site_title' );
     add_action( 'momentous_site_title', 'child_momentous_display_site_title' );
 }
@@ -103,26 +103,26 @@ function d_globals() {
 
 // Display Postmeta Data
 function momentous_display_postmeta() {
-	
+
 	// Get Theme Options from Database
 	$theme_options = momentous_theme_options();
 
 	// Display Date unless user has deactivated it via settings
 	if ( isset($theme_options['meta_date']) and $theme_options['meta_date'] == true ) : ?>
 		<span class="meta-date">
-		<?php printf('<time class="entry-date published updated" title="%1$s" datetime="%2$s">%3$s</time>', 
+		<?php printf('<time class="entry-date published updated" title="%1$s" datetime="%2$s">%3$s</time>',
 				esc_attr( get_the_time() ),
 				esc_attr( get_the_date( 'c' ) ),
 				esc_html( get_the_date() )
 			);
 		?>
 		</span>
-	<?php endif; 
-	
+	<?php endif;
+
 	// Display Author unless user has deactivated it via settings
-	if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>		
+	if ( isset($theme_options['meta_author']) and $theme_options['meta_author'] == true ) : ?>
 		<span class="meta-author">
-		<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'momentous-lite'), 
+		<?php printf(__('by <span class="author vcard"><a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a></span>', 'momentous-lite'),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_attr( sprintf( __( 'View all posts by %s', 'momentous-lite' ), get_the_author() ) ),
 				get_the_author()
@@ -147,7 +147,7 @@ function momentous_display_postinfo_index() {
 	if ( isset($theme_options['meta_category']) and $theme_options['meta_category'] == true ) : ?>
 		<span class="meta-category">
 			<?php printf('%1$s', get_the_category_list(', '));
-			
+
 			// Display Date unless user has deactivated it via settings
 			if ( isset($theme_options['meta_tags']) and $theme_options['meta_tags'] == true ) {
 				$tag_list = get_the_tag_list(', ', ', ');
@@ -160,12 +160,12 @@ function momentous_display_postinfo_index() {
 }
 
 // Display Content Pagination
-function momentous_display_pagination() { 
+function momentous_display_pagination() {
 	global $wp_query;
 	$big = 999999999; // need an unlikely integer
 	$paginate_links = paginate_links( array(
 			'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-			'format' => '?paged=%#%',				
+			'format' => '?paged=%#%',
 			'current' => max( 1, get_query_var( 'paged' ) ),
 			'total' => $wp_query->max_num_pages,
 			'next_text' => '<span class="goto-older-posts">Следующая →</span>',
@@ -219,22 +219,12 @@ add_filter( 'get_the_archive_title', function ($title) {
     		get_tag_link($tag->term_id),
     		plural($tag->count, '%d статья', '%d статьи', '%d статей'),
     		$tag->name);
-
-		if(tag_description($tag->term_id)) {
-			$title .= '<div class="archive-description">' . tag_description($tag->term_id) . '</div>';
-		}
     }
     else if (is_category()) {
 		$title = sprintf("Тема: <span>%s</span>", single_cat_title('', false));
-		if(category_description()) {
-			$title .= '<div class="archive-description">' . category_description() . '</div>';
-		}
 
 	} elseif (is_tag()) {
 		$title = sprintf("Тег: <span>%s</span>", single_tag_title('', false));
-		if(tag_description()) {
-			$title .= '<div class="archive-description">' . tag_description() . '</div>';
-		}
 
 	} elseif (is_month()) {
         $title = sprintf("Архив за <span>%s</span>", get_the_date('F Y'));
@@ -243,6 +233,19 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 });
 
+
+add_filter( 'get_the_archive_description', function ($desc) {
+    if(is_category() && is_tag()) {
+        $tag = get_tag(get_query_var('tag_id'));
+        $category = get_category(get_query_var('cat'));
+
+        if(tag_description($tag->term_id)) {
+            $desc = tag_description($tag->term_id);
+        }
+    }
+
+    return $desc;
+});
 
 
 
@@ -365,22 +368,22 @@ function mailpoet_get_undo_unsubscribe() {
 // [custom:blog_name]
 add_filter('wysija_shortcodes', 'mailpoet_shortcodes_custom_filter', 10, 2);
 function mailpoet_shortcodes_custom_filter($tag_value, $user_id) {
- 
+
     // $tag_value contains the string after custom:
     // This function will be called the first time with $tag_value = my_name
     // The second time with $tag_value = blog_name
- 
+
     // $user_id contains the corresponding MailPoet's subscriber id,
     // this could be useful to fetch extra data from the WordPress user's meta for instance
     // e.g.: https://gist.github.com/benheu/cf9eb925b0e17e6dbd6c
- 
+
     if ($tag_value === 'test') {
         $replacement = 'test: OK!';
     }
     else if ($tag_value === 'blog_name') {
         $replacement = get_bloginfo('name');
     }
- 
+
     return $replacement;
 }
 
