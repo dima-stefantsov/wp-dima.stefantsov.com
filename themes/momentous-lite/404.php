@@ -4,6 +4,8 @@
 		
 		<section id="content" class="primary" role="main">
 
+			<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 			<div class="type-page">
 			
 				<h2 class="page-title"><?php esc_html_e( '404: Page not found', 'momentous-lite' ); ?></h2>
@@ -13,15 +15,23 @@
 					
 					<?php get_search_form(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+					<?php // Set Widget arguments
+					$args = array(
+						'before_widget' => '<section class="404-widget">',
+						'after_widget' => '</section>',
+						'before_title' => '<h3>',
+						'after_title' => '</h3>',
+					); ?>
+						
+					<?php the_widget( 'WP_Widget_Recent_Posts', '', $args ); ?>
 
-					<?php the_widget( 'WP_Widget_Archives', 'dropdown=1' ); ?>
+					<?php the_widget( 'WP_Widget_Archives', 'dropdown=1', $args ); ?>
 					
-					<?php the_widget( 'WP_Widget_Categories', 'dropdown=1' ); ?>
+					<?php the_widget( 'WP_Widget_Categories', 'dropdown=1', $args ); ?>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+					<?php the_widget( 'WP_Widget_Tag_Cloud', '', $args ); ?>
 					
-					<?php the_widget( 'WP_Widget_Pages' ); ?>
+					<?php the_widget( 'WP_Widget_Pages', '', $args ); ?>
 					
 				</div>
 				

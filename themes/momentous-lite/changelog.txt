@@ -2,6 +2,20 @@
 Momentous Lite Changelog
 ===================================
 
+Version 1.1.7
+-----------------------------------
+[added] support for ThemeZee Related Posts plugin
+[added] custom header image settings
+[added] theme links in theme options panel
+[added] category and tag descriptions on archive template
+
+Version 1.1.6
+-----------------------------------
+[added] support for ThemeZee Breadcrumbs plugin
+[added] email icon to social menu
+[removed] empty spaces at the end of template files
+[fixed] styling of 404 template
+
 Version 1.1.5
 -----------------------------------
 [changed] all h2 post and page titles to h1 for better SEO
