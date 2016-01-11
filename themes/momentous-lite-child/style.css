@@ -5,7 +5,7 @@
  Author:       Dima Stefantsov
  Author URI:   http://dima.stefantsov.com
  Template:     momentous-lite
- Version:      1.3.4
+ Version:      1.3.7
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags:         russian, dimps, stefantsov
@@ -451,6 +451,11 @@ body ul ul#ap-user-menu-link li > a:hover {
 .entry li p, .comment li p {
     text-indent: initial;
 }
+#anspress #ap-question-sorting li {
+    text-indent: initial;
+    padding-left: initial;
+    margin-bottom: initial;
+}
 .ap-q-inner .ap-post-history {
     display: none;
 }
@@ -515,4 +520,13 @@ div.ap-comment-header {
 }
 .search-results .type-page {
     background-color: #ffd;
+}
+
+#anspress #ap-search-form {
+    display: none;
+}
+#anspress .ap-list-head {
+    border: none;
+    padding-right: 15px;
+    padding-top: 0;
 }
