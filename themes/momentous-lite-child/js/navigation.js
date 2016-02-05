@@ -53,7 +53,7 @@
                 /* Add dropdown animation for desktop navigation menu */
                 $menu.find('ul').css({display: 'none'});
                 $menu.find('li').hover(function(){
-                    $(this).find('ul:first').css({visibility: 'visible',display: 'none'}).slideDown(300);
+                    $(this).find('ul:first').css({visibility: 'visible',display: 'none'}).slideDown('fast');
                 },function(){
                     $(this).find('ul:first').css({visibility: 'hidden'});
                 });
