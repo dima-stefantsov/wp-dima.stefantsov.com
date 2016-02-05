@@ -295,7 +295,11 @@ function child_momentous_register_sidebars() {
 }
 add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
-wp_enqueue_script('child-momentous-lite-dindex-js', get_stylesheet_directory_uri() .'/js/index.js', array('jquery'));
+wp_enqueue_script(
+    'child-momentous-lite-dindex-js',
+    get_stylesheet_directory_uri() .'/js/index.js',
+    array('jquery'),
+    wp_get_theme()->get('Version'));
 
 // ACF Advanced Custom Fields
 add_action('wp_head','d_head');
