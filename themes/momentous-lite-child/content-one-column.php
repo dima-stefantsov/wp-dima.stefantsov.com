@@ -1,17 +1,17 @@
-		
+
 	<article id="post-<?php the_ID(); ?>" <?php post_class('one-column-post'); ?>>
-		
+
 		<?php momentous_display_thumbnail_index(); ?>
 
-		<h2 class="post-title entry-title"><a href="<?php esc_url(the_permalink()) ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-		
-		<div class="postmeta clearfix"><?php momentous_display_postmeta(); ?></div>
-		
+		<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+
+		<div class="entry-meta postmeta clearfix"><?php momentous_display_postmeta(); ?></div>
+
 		<div class="entry clearfix">
 			<?php the_excerpt(); ?>
 			<a href="<?php esc_url(the_permalink()) ?>" class="more-link">Читать полностью →</a>
 		</div>
-		
+
 		<div class="postinfo clearfix"><?php momentous_display_postinfo_index(); ?></div>
 
 	</article>
