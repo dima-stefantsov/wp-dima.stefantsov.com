@@ -238,7 +238,25 @@ if ( ! function_exists( 'momentous_display_postinfo_single' ) ) :
 endif;
 
 
-// Display Momentous Lite plugin
+// Display Single Post Navigation
+if ( ! function_exists( 'momentous_display_post_navigation' ) ):
+	
+	function momentous_display_post_navigation() { 
+		
+		// Get Theme Options from Database
+		$theme_options = momentous_theme_options();
+		
+		if ( true == $theme_options['post_navigation'] ) {
+
+			the_post_navigation( array( 'prev_text' => '&laquo; %title', 'next_text' => '%title &raquo;' ) );
+			
+		}
+	}
+	
+endif;
+
+
+// Display ThemeZee Related Posts plugin
 if ( ! function_exists( 'momentous_display_related_posts' ) ):
 	
 	function momentous_display_related_posts() { 
@@ -316,7 +334,7 @@ function momentous_display_credit_link() {
 		
 	printf( esc_html__( 'Powered by %1$s and %2$s.', 'momentous-lite' ), 
 		'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-		'<a href="http://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
+		'<a href="https://themezee.com/themes/momentous/" title="Momentous WordPress Theme">Momentous</a>'
 	); 
 }
 
