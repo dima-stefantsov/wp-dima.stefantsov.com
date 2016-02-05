@@ -1,5 +1,5 @@
 (function($) {
-    
+
 
     $(document).ready(function() {
 
@@ -8,6 +8,10 @@
         $(document.links).filter(function() {
             return this.hostname !== window.location.hostname;
         }).attr('target', '_blank');
+
+        $('#mainnav-menu').find('.submenu-dropdown-toggle-desktop').on('click', function() {
+            $(this).find('.submenu-dropdown-toggle').click();
+        });
 
     });
 
@@ -84,7 +88,7 @@
         ,'Бойся равнодушных. Ибо с их молчаливого согласия совершаются все подлости в мире.'
         ,'Скромность красит человека. В серенький цвет.'
         ,'I disapprove of what you say, but I will defend to the death your right to say it.'
-    ];  
+    ];
 
     function changeQuote(){
         $("h2.site-description").fadeOut("slow", function(){
@@ -92,5 +96,6 @@
             $("h2.site-description").fadeIn("slow");
         });
     };
+
 
 }(jQuery));

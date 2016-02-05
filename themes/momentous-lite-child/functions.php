@@ -301,6 +301,13 @@ wp_enqueue_script(
     array('jquery'),
     wp_get_theme()->get('Version'));
 
+wp_enqueue_script(
+    'child-momentous-lite-navigation-js',
+    get_stylesheet_directory_uri() .'/js/navigation.js',
+    array('jquery', 'momentous-lite-jquery-navigation'),
+    wp_get_theme()->get('Version'));
+
+
 // ACF Advanced Custom Fields
 add_action('wp_head','d_head');
 function d_head() {
