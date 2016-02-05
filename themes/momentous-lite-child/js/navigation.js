@@ -75,7 +75,7 @@
 
         /* Add dropdown slide animation for mobile devices */
         $('#' + toggleID).on('click', function(){
-            $menu.slideToggle();
+            $menu.slideToggle('fast');
             $(this).toggleClass('active');
         });
 
@@ -83,14 +83,20 @@
         $menu.find('li.menu-item-has-children ul').each( function () {
             $( this ).hide();
         } );
-        $menu.find('.submenu-dropdown-toggle').on('click', function(){
+
+        // Toggle of submenus.
+        $menu.find('.submenu-dropdown-toggle').on('click', function() {
             var $submenu = $(this).parent().find('ul:first');
             $submenu.stop();
-            $submenu.slideToggle();
+            $submenu.slideToggle('fast');
             $(this).toggleClass('active');
             return false;
         });
 
+        // Do not close menu when item is clicked.
+        $menu.find('ul.sub-menu li a').on('click', function(e) {
+            e.stopPropagation();
+        });
     };
 
 
