@@ -18,20 +18,20 @@
 <div id="wrapper" class="hfeed">
 
     <div id="header-wrap">
-    
+
         <header id="header" class="container clearfix" role="banner">
 
             <div id="logo">
-            
+
                 <?php do_action('momentous_site_title'); ?>
-                
+
                 <?php // Display Tagline on header if activated
-                if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>            
-                    <h2 class="site-description"><?php echo bloginfo('description'); ?></h2>
+                if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>
+                    <div class="site-description"><?php echo bloginfo('description'); ?></div>
                 <?php endif; ?>
-            
+
             </div>
-            
+
             <div id="header-content" class="clearfix">
 
                 <?php // Display Header Search Icon
@@ -40,23 +40,23 @@
                         <span class="genericon-search"></span>
                     </div>
                 <?php endif; ?>
-                
+
                 <?php // Display Top Navigation
                 if ( has_nav_menu( 'secondary' ) ) : ?>
-            
+
                     <nav id="topnav" class="clearfix" role="navigation">
                         <?php wp_nav_menu(  array(
-                            'theme_location' => 'secondary', 
-                            'container' => false, 
-                            'menu_id' => 'topnav-menu', 
-                            'fallback_cb' => '', 
+                            'theme_location' => 'secondary',
+                            'container' => false,
+                            'menu_id' => 'topnav-menu',
+                            'fallback_cb' => '',
                             'depth' => 1)
                         );
                         ?>
                     </nav>
-            
+
                 <?php endif; ?>
-            
+
             </div>
 
         </header>
@@ -69,11 +69,11 @@
                 </div>
             </div>
         <?php endif; ?>
-        
+
         <div id="navigation-wrap">
-            
+
             <div id="navigation" class="container clearfix">
-                
+
                 <?php // Display Social Icons in Navigation
                     if ( isset($theme_options['header_icons']) and $theme_options['header_icons'] == true ) : ?>
 
@@ -82,26 +82,25 @@
                         </div>
 
                 <?php endif; ?>
-                
-                
+
+
                 <nav id="mainnav" class="clearfix" role="navigation">
                     <?php // Display Main Navigation
                         wp_nav_menu( array(
-                            'theme_location' => 'primary', 
-                            'container' => false, 
-                            'menu_id' => 'mainnav-menu', 
-                            'echo' => true, 
+                            'theme_location' => 'primary',
+                            'container' => false,
+                            'menu_id' => 'mainnav-menu',
+                            'echo' => true,
                             'fallback_cb' => 'momentous_default_menu')
                         );
                     ?>
                 </nav>
-                
+
             </div>
-            
+
         </div>
-    
+
     </div>
 
     <?php // Display Custom Header Image
         momentous_display_custom_header(); ?>
-        

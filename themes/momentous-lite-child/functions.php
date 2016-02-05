@@ -56,7 +56,7 @@ function child_momentous_display_credit_link() {
 
 function child_momentous_display_site_title() { ?>
 	<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+		<div class="site-title"><?php bloginfo('name'); ?></div>
 	</a>
 <?php
 }
