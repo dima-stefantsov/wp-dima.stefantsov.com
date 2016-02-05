@@ -3,7 +3,7 @@
 
     $(document).ready(function() {
 
-        $("h2.site-description").click(changeQuote);
+        $(".site-description").click(changeQuote);
 
         $(document.links).filter(function() {
             return this.hostname !== window.location.hostname;
@@ -91,9 +91,9 @@
     ];
 
     function changeQuote(){
-        $("h2.site-description").fadeOut("slow", function(){
-            $("h2.site-description").text(quote[Math.floor(Math.random()*quote.length)]);
-            $("h2.site-description").fadeIn("slow");
+        $(".site-description").fadeOut("slow", function(){
+            $(".site-description").text(quote[Math.floor(Math.random()*quote.length)]);
+            $(".site-description").fadeIn("slow");
         });
     };
 
