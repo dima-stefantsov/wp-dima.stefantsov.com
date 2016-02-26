@@ -3,12 +3,7 @@ jQuery(function($) {
     handle_hash_change();
 
     $(".spoiler-head").on("click", function() {
-        if ($(this).hasClass("expanded")) {
-            collapse($(this));
-        }
-        else {
-            expand($(this));
-        }
+        toggle($(this));
     });
 
     $(window).on("hashchange", handle_hash_change);
@@ -22,15 +17,21 @@ jQuery(function($) {
         }
     }
 
+    function toggle($spoiler) {
+        $spoiler.toggleClass("expanded");
+        $spoiler.next().stop();
+        $spoiler.next().slideToggle("fast");
+    }
+
     function expand($spoiler) {
-        $spoiler.removeClass("collapsed");
         $spoiler.addClass("expanded");
+        $spoiler.next().stop();
         $spoiler.next().slideDown("fast");
     }
 
     function collapse($spoiler) {
         $spoiler.removeClass("expanded");
-        $spoiler.addClass("collapsed");
+        $spoiler.next().stop();
         $spoiler.next().slideUp("fast");
     }
 });
