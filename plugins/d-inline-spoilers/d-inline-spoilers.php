@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: D Inline Spoilers
-Version: 1.2.6
+Version: 1.2.6_9
 Description: [dspoiler title="This Is Spoiler" class="additional classes" id="unique-id"]multiline html hidden content[/dspoiler]
 Author: Dima Stefantsov
 Author URI: http://stefantsov.com/
@@ -57,15 +57,19 @@ function dis_styles_scripts() {
 	}
 
 
+    $plugin_data = get_plugin_data( __FILE__ );
+    $plugin_version = $plugin_data['Version'];
 	wp_register_style( 'd-inline-spoilers_style',
 		plugins_url( 'css/d-inline-spoilers.css', __FILE__ ),
 		null,
-		'1.0' );
+		$plugin_version
+		);
 	wp_register_script(	'd-inline-spoilers_script',
 		plugins_url( 'js/d-inline-spoilers.js', __FILE__ ),
-		array( 'jquery' ),
-		'1.0',
-		true );
+		array('jquery'),
+		$plugin_version,
+		true
+		);
 	wp_enqueue_style( 'd-inline-spoilers_style' );
 	wp_enqueue_script( 'd-inline-spoilers_script' );
 }
