@@ -9,9 +9,9 @@
 		<section id="content" class="primary" role="main">
 
 		<?php if (have_posts()) : ?>
-			<h2 id="search-title" class="archive-title">
+			<h1 id="search-title" class="archive-title">
 				<?php printf( 'Найдено по запросу: %s', '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
+			</h1>
 
 			<div id="post-wrapper" class="post-wrapper clearfix">
 
@@ -28,9 +28,9 @@
 
 		else : ?>
 
-			<h2 id="search-title" class="archive-title">
+			<h1 id="search-title" class="archive-title">
 				<?php printf( 'Искали по запросу: %s', '<span>' . get_search_query() . '</span>' ); ?>
-			</h2>
+			</h1>
 
 			<div class="post type-page">
 				<div class="entry">
