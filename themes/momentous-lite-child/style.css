@@ -301,7 +301,7 @@ input, textarea {
 .dbounce {
     text-align: left;
 }
-.dbounce h2 {
+.dbounce .thank-you {
     font-size: 2.3em;
     margin-bottom: 1em;
 }
