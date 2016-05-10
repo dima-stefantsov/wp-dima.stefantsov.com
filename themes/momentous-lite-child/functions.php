@@ -295,18 +295,21 @@ function child_momentous_register_sidebars() {
 }
 add_action( 'widgets_init', 'child_momentous_register_sidebars' );
 
-wp_enqueue_script(
-    'child-momentous-lite-dindex-js',
-    get_stylesheet_directory_uri() .'/js/index.js',
-    array('jquery'),
-    wp_get_theme()->get('Version'));
 
-wp_enqueue_script(
-    'child-momentous-lite-navigation-js',
-    get_stylesheet_directory_uri() .'/js/navigation.js',
-    array('jquery', 'momentous-lite-jquery-navigation'),
-    wp_get_theme()->get('Version'));
+add_action('wp_enqueue_scripts', 'momentous_child_enqueue_scripts');
+function momentous_child_enqueue_scripts() {
+    wp_enqueue_script(
+        'child-momentous-lite-dindex-js',
+        get_stylesheet_directory_uri() .'/js/index.js',
+        array('jquery'),
+        wp_get_theme()->get('Version'));
 
+    wp_enqueue_script(
+        'child-momentous-lite-navigation-js',
+        get_stylesheet_directory_uri() .'/js/navigation.js',
+        array('jquery', 'momentous-lite-jquery-navigation'),
+        wp_get_theme()->get('Version'));
+}
 
 // ACF Advanced Custom Fields
 add_action('wp_head','d_head');
